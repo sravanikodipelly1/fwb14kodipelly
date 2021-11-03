@@ -3,3 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  p Welcome to the visual studio code
+  button(type="button", class="btn btn-secondary" onclick="update()") Press Me
+  |C
+  div(id="target") Display
+
+  script.
+    var client_count=0;
+    function update(){
+      client_count= client_count+1;
+
+      document.getElementById("target").innerHTML="No of Clicks: "+client_count;
+    }
