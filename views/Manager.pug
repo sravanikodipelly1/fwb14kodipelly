@@ -3,4 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  - var results = [{Id:"001", Name:"rahul", Branch:"chicago"},{Id:"002", Name: "radha", Branch:"maryville"},{Id:"003", Name:"sahithi", Branch:"irving"}]
+   div(class="container-fluid")
+    div(class="row" )
+     each res,index in results
+     div(class="col-sm-4" onclick=`buy(${index})`) Id : #{res.Id} , Name : #{res.Name} , Branch : #{res.Branch} 
   
