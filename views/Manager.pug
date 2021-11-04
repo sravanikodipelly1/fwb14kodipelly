@@ -7,5 +7,14 @@ block content
   div(class="container-fluid")
    div(class="row" )
    each res,index in results
-    div(class="col-sm-4" onclick=`buy(${index})`) Id : #{res.Id} , Name : #{res.Name} , Branch : #{res.Branch} 
+      div(class="col-sm-2" onclick=`buy(${index})`) Id: #{res.Id}  
+      div(class="col-sm-2" onclick=`buy(${index})`) Name: #{res.Name}
+      div(class="col-sm-2" onclick=`buy(${index})`) Branch: #{res.Branch}
+  script.
+    let BranchNumber=0                
+      function buy(BranchNumber)
+      {
+        
+        alert(`your current working Branch ${BranchNumber+1}`)
+      }
   
